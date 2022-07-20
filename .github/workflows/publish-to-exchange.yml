@@ -38,6 +38,8 @@ jobs:
                 "password": "${{ secrets.RELEASES_EE_PASSWORD }}"
             }]
           
+      - run: cat ~/.m2/settings.xml
+      
       - run: cd bom && mvn clean deploy
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
