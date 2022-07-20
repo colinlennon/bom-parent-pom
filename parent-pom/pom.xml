@@ -8,7 +8,7 @@
     <parent>
         <groupId>4662d833-1567-4253-b115-eb71a03c7051</groupId>
         <artifactId>solutions-bom</artifactId>
-        <version>0.0.1</version>
+        <version>0.0.2</version>
     </parent>
 
     <artifactId>solutions-parent-pom</artifactId>
