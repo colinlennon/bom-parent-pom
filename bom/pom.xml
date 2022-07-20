@@ -34,10 +34,34 @@
         <munit.version>2.3.6</munit.version>
 
         <maven.release.plugin.version>2.5.3</maven.release.plugin.version>
+	<exchange-mule-maven-plugin.version>0.0.13</exchange-mule-maven-plugin.version>
     </properties>
 
     <!--********************************-->
     <build>
+	<plugins>
+		<plugin>
+		    <groupId>org.mule.tools.maven</groupId>
+		    <artifactId>exchange-mule-maven-plugin</artifactId>
+		    <version>${exchange-mule-maven-plugin.version}</version>
+		    <executions>
+			<execution>
+			    <id>validate</id>
+			    <phase>validate</phase>
+			    <goals>
+				<goal>exchange-pre-deploy</goal>
+			    </goals>
+			</execution>
+			<execution>
+			    <id>deploy</id>
+			    <phase>deploy</phase>
+			    <goals>
+				<goal>exchange-deploy</goal>
+			    </goals>
+			</execution>
+		    </executions>
+		</plugin>
+	</plugins>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -47,24 +71,8 @@
                 </plugin>
                 <plugin>
                     <groupId>org.mule.tools.maven</groupId>
-                    <artifactId>exchange-mule-maven-plugin</artifactId>
-                    <version>0.0.13</version>
-		    <executions>
-		        <execution>
-		            <id>validate</id>
-		            <phase>validate</phase>
-		            <goals>
-			        <goal>exchange-pre-deploy</goal>
-		            </goals>
-		        </execution>
-		        <execution>
-		            <id>deploy</id>
-		            <phase>deploy</phase>
-		            <goals>
-			        <goal>exchange-deploy</goal>
-		            </goals>
-		        </execution>
-	            </executions>
+                    <artifactId>mule-maven-plugin</artifactId>
+                    <version>${mule.maven.plugin.version}</version>		    
                 </plugin>
                 <plugin>
                     <groupId>com.mulesoft.munit.tools</groupId>
