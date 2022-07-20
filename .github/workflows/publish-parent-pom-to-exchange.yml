@@ -37,7 +37,5 @@ jobs:
                 "username": "${{ secrets.RELEASES_EE_USERNAME }}",
                 "password": "${{ secrets.RELEASES_EE_PASSWORD }}"
             }]
-          
-      - run: cat ~/.m2/settings.xml
       
       - run: cd parent-pom && mvn clean deploy
