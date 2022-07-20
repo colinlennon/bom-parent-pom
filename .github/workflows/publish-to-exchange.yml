@@ -28,11 +28,6 @@ jobs:
           java-version: 11
           settings-servers: |
             [{
-                "id": "anypoint-exchange-v3",
-                "username": "~~~Client~~~",
-                "password": "${{ secrets.ca-client-id }}~?~${{ secrets.ca-client-secret }}"
-            },
-            {
                 "id": "mulesoft-releases-ee",
                 "username": "${{ secrets.releases-ee-username }}",
                 "password": "${{ secrets.releases-ee-password }}"
