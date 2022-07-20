@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  publish-bom:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -28,12 +28,17 @@ jobs:
           java-version: 11
           settings-servers: |
             [{
+                "id": "anypoint-exchange-v3",
+                "username": "~~~Client~~~",
+                "password": "${{ secrets.CA_CLIENT_ID }}~?~${{ secrets.CA_CLIENT_SECRET }}"
+            },
+            {
                 "id": "mulesoft-releases-ee",
-                "username": "TEST",
-                "password": "${{ secrets.releases-ee-password }}"
+                "username": "${{ secrets.RELEASES_EE_USERNAME }}",
+                "password": "${{ secrets.RELEASES_EE_PASSWORD }}"
             }]
           
-      - run: mvn clean deploy
+      - run: cd bom && mvn clean deploy
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       #- uses: actions/checkout@v3
