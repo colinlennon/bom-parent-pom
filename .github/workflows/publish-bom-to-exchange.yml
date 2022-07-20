@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Publish to Exchange
+name: Publish BOM to Exchange
 
 # Controls when the workflow will run
 on:
@@ -28,7 +28,7 @@ jobs:
           java-version: 11
           settings-servers: |
             [{
-                "id": "anypoint-exchange-v3",
+                "id": "anypoint-exchange-v2",
                 "username": "~~~Client~~~",
                 "password": "${{ secrets.CA_CLIENT_ID }}~?~${{ secrets.CA_CLIENT_SECRET }}"
             },
@@ -41,16 +41,3 @@ jobs:
       - run: cat ~/.m2/settings.xml
       
       - run: cd bom && mvn clean deploy
-      
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      #- uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      #- name: Run a one-line script
-      #  run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      #- name: Run a multi-line script
-      #  run: |
-      #    echo Add other actions to build,
-      #    echo test, and deploy your project.
