@@ -26,6 +26,7 @@ jobs:
         uses: s4u/setup-maven-action@v1.4.0
         with:
           java-version: 11
+          cache-path: "~/.m2/repository"
           settings-servers: |
             [{
                 "id": "anypoint-exchange-v3",
