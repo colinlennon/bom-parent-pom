@@ -11,6 +11,7 @@
         <version>0.0.3</version>
     </parent>
 
+    <groupId>4662d833-1567-4253-b115-eb71a03c7051</groupId>
     <artifactId>solutions-parent-pom</artifactId>
     <version>0.0.3</version>
     <packaging>pom</packaging>
