@@ -45,7 +45,7 @@
             <plugin>
                 <groupId>org.mule.tools.maven</groupId>
                 <artifactId>exchange-mule-maven-plugin</artifactId>
-                <version>${exchange.mule.maven.plugin}</version>
+                <version>${exchange-mule-maven-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>validate</id>
