@@ -28,7 +28,7 @@ jobs:
           java-version: 11
           settings-servers: |
             [{
-                "id": "anypoint-exchange-v2",
+                "id": "anypoint-exchange-v3",
                 "username": "~~~Client~~~",
                 "password": "${{ secrets.CA_CLIENT_ID }}~?~${{ secrets.CA_CLIENT_SECRET }}"
             },
