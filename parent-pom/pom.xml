@@ -13,7 +13,7 @@
 
     <groupId>4662d833-1567-4253-b115-eb71a03c7051</groupId>
     <artifactId>solutions-parent-pom</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <packaging>pom</packaging>
     <name>solutions-parent-pom</name>
 
@@ -89,6 +89,7 @@
                             <nonFilteredFileExtension>p12</nonFilteredFileExtension>
                             <nonFilteredFileExtension>crt</nonFilteredFileExtension>
                             <nonFilteredFileExtension>pem</nonFilteredFileExtension>
+                            <nonFilteredFileExtension>jks</nonFilteredFileExtension>
                         </nonFilteredFileExtensions>
                     </configuration>
                 </plugin>
