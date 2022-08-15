@@ -9,6 +9,7 @@
         <groupId>4662d833-1567-4253-b115-eb71a03c7051</groupId>
         <artifactId>solutions-bom</artifactId>
         <version>0.0.3</version>
+        <relativePath>../bom/pom.xml</relativePath>
     </parent>
 
     <groupId>4662d833-1567-4253-b115-eb71a03c7051</groupId>
